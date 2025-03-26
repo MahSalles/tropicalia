@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function(){
      diminuiFonteBotao.addEventListener('click', function(){
          tamanhoAtualFonte -= 0.1;
          document.body.style.fontSize = `${tamanhoAtualFonte}rem`
+botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
+
  
      })
  
@@ -41,3 +43,4 @@ document.addEventListener('DOMContentLoaded', function(){
  ScrollReveal().reveal('#tropicalia', { delay: 500 });
  ScrollReveal().reveal('#galeria', { delay: 500 });
  ScrollReveal().reveal('#contato', { delay: 500 });
+ const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
